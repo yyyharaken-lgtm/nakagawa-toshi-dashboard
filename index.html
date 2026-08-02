@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中川さん トシアカウント 運用状況ダッシュボード</title>
+<style>
+ :root{--bg:#f4f6fb;--card:#fff;--ink:#0f172a;--muted:#64748b;--line:#e5e9f2;--up:#16a34a;--down:#dc2626;}
+ *{box-sizing:border-box} body{margin:0;font-family:-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+ .wrap{max-width:960px;margin:0 auto;padding:28px 20px 64px}
+ header.top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:8px}
+ .title{font-size:24px;font-weight:800;letter-spacing:.02em}
+ .subtitle{color:var(--muted);font-size:13px;margin-top:2px}
+ .period{text-align:right;font-size:13px;color:var(--muted)}
+ .period strong{display:block;font-size:16px;color:var(--ink)}
+ .demo-banner{background:#fef3c7;border:1px solid #fcd34d;color:#92400e;padding:10px 14px;border-radius:8px;font-size:13px;margin:16px 0}
+ h2{font-size:15px;font-weight:700;margin:32px 0 12px;display:flex;align-items:center;gap:8px}
+ h2::before{content:"";width:4px;height:16px;background:var(--ink);border-radius:2px}
+ .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+ @media(max-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+ .card-top{display:flex;align-items:center;gap:7px} .dot{width:8px;height:8px;border-radius:50%}
+ .card-title{font-size:12.5px;color:var(--muted);font-weight:600}
+ .card-val{font-size:30px;font-weight:800;margin-top:6px;letter-spacing:-.01em}
+ .card-sub{font-size:11.5px;color:var(--muted);margin-bottom:8px}
+ .delta{font-size:12.5px;font-weight:700} .delta em{font-style:normal;font-weight:600;opacity:.85}
+ .delta.up{color:var(--up)} .delta.down{color:var(--down)} .delta.neutral{color:var(--muted)}
+ .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+ .chart{width:100%;height:auto}
+ .chart .grid{stroke:var(--line);stroke-width:1} .axis-y{fill:var(--muted);font-size:11px;text-anchor:end}
+ .axis-x{fill:var(--muted);font-size:11px;text-anchor:middle}
+ .two{display:grid;grid-template-columns:1fr 1fr;gap:14px} @media(max-width:640px){.two{grid-template-columns:1fr}}
+ table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+ th,td{padding:12px 14px;text-align:left;font-size:13px;border-bottom:1px solid var(--line);vertical-align:top}
+ th{background:#f8fafc;font-size:11.5px;color:var(--muted);font-weight:700;letter-spacing:.03em}
+ th.num,td.num{text-align:right;white-space:nowrap} tr:last-child td{border-bottom:none}
+ .rank{font-weight:800;color:var(--muted);width:28px} .ptext{max-width:440px}
+ .pmeta{font-size:11px;color:var(--muted);margin-top:4px} .pmeta a{color:#2563eb;text-decoration:none}
+ .empty{color:var(--muted);text-align:center;padding:20px} .muted{color:var(--muted)}
+ .notebox{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:13.5px}
+ footer{margin-top:40px;text-align:center;color:var(--muted);font-size:11.5px}
+</style></head>
+<body><div class="wrap">
+ <header class="top">
+   <div>
+     <div class="title">中川さん トシアカウント</div>
+     <div class="subtitle">Threads 運用状況レポート ・ @toshi_amazon_buppan</div>
+   </div>
+   <div class="period"><span>対象期間</span><strong>2026-07-27 〜 2026-08-02</strong></div>
+ </header>
+ 
+
+ <h2>対象週のサマリー</h2>
+ <div class="grid"><div class="card">
+          <div class="card-top"><span class="dot" style="background:#7c3aed"></span><span class="card-title">フォロワー数</span></div>
+          <div class="card-val">507</div>
+          <div class="card-sub">累計（前週比は7日前との差）</div>
+          <span class="delta up">▲ +17 <em>(+3.5%)</em></span>
+        </div><div class="card">
+          <div class="card-top"><span class="dot" style="background:#2563eb"></span><span class="card-title">週間閲覧数</span></div>
+          <div class="card-val">7,335</div>
+          <div class="card-sub">週合計</div>
+          <span class="delta down">▼ -9,598 <em>(-56.7%)</em></span>
+        </div><div class="card">
+          <div class="card-top"><span class="dot" style="background:#0ea5e9"></span><span class="card-title">週間いいね</span></div>
+          <div class="card-val">27</div>
+          <div class="card-sub">週合計</div>
+          <span class="delta up">▲ +2 <em>(+8.0%)</em></span>
+        </div><div class="card">
+          <div class="card-top"><span class="dot" style="background:#db2777"></span><span class="card-title">エンゲージメント計</span></div>
+          <div class="card-val">28</div>
+          <div class="card-sub">いいね+RP+引用</div>
+          <span class="delta up">▲ +1 <em>(+3.7%)</em></span>
+        </div><div class="card">
+          <div class="card-top"><span class="dot" style="background:#ea580c"></span><span class="card-title">週間投稿本数</span></div>
+          <div class="card-val">24</div>
+          <div class="card-sub">本</div>
+          <span class="delta down">▼ -11 <em>(-31.4%)</em></span>
+        </div></div>
+
+ <h2>推移</h2>
+ <div class="two">
+   <div class="panel"><div class="card-title" style="margin-bottom:8px">フォロワー数の推移（日次・2026-05-07起点）</div><svg viewBox="0 0 680 220" class="chart" preserveAspectRatio="xMidYMid meet">
+      <defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.22"/>
+        <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></linearGradient></defs>
+      <line x1="48" y1="16.0" x2="664" y2="16.0" class="grid"/><text x="40" y="20.0" class="axis-y">600</text><line x1="48" y1="58.5" x2="664" y2="58.5" class="grid"/><text x="40" y="62.5" class="axis-y">450</text><line x1="48" y1="101.0" x2="664" y2="101.0" class="grid"/><text x="40" y="105.0" class="axis-y">300</text><line x1="48" y1="143.5" x2="664" y2="143.5" class="grid"/><text x="40" y="147.5" class="axis-y">150</text><line x1="48" y1="186.0" x2="664" y2="186.0" class="grid"/><text x="40" y="190.0" class="axis-y">0</text>
+      <polygon points="48,186 48.0,186.0 55.5,186.0 63.0,186.0 70.5,185.7 78.0,185.2 85.6,183.4 93.1,182.3 100.6,179.8 108.1,171.6 115.6,170.4 123.1,167.9 130.6,165.9 138.1,165.3 145.7,163.6 153.2,162.8 160.7,161.6 168.2,160.8 175.7,159.4 183.2,158.5 190.7,157.1 198.2,153.7 205.8,150.3 213.3,149.2 220.8,144.1 228.3,142.9 235.8,141.8 243.3,137.3 250.8,135.6 258.3,134.2 265.9,133.0 273.4,131.3 280.9,130.5 288.4,128.8 295.9,127.6 303.4,126.5 310.9,125.4 318.4,124.2 326.0,119.1 333.5,118.0 341.0,116.6 348.5,115.2 356.0,114.0 363.5,109.5 371.0,108.9 378.5,108.4 386.0,107.5 393.6,106.4 401.1,105.5 408.6,104.7 416.1,103.5 423.6,102.4 431.1,98.7 438.6,97.3 446.1,96.2 453.7,95.3 461.2,94.2 468.7,93.1 476.2,91.7 483.7,87.1 491.2,86.3 498.7,84.8 506.2,84.0 513.8,83.2 521.3,82.0 528.8,81.2 536.3,80.0 543.8,79.5 551.3,78.3 558.8,77.2 566.3,70.1 573.9,69.0 581.4,66.4 588.9,60.5 596.4,57.4 603.9,54.0 611.4,52.3 618.9,50.0 626.4,47.4 634.0,47.2 641.5,46.3 649.0,46.3 656.5,41.8 664.0,42.3 664.0,186" fill="url(#lg)"/>
+      <polyline points="48.0,186.0 55.5,186.0 63.0,186.0 70.5,185.7 78.0,185.2 85.6,183.4 93.1,182.3 100.6,179.8 108.1,171.6 115.6,170.4 123.1,167.9 130.6,165.9 138.1,165.3 145.7,163.6 153.2,162.8 160.7,161.6 168.2,160.8 175.7,159.4 183.2,158.5 190.7,157.1 198.2,153.7 205.8,150.3 213.3,149.2 220.8,144.1 228.3,142.9 235.8,141.8 243.3,137.3 250.8,135.6 258.3,134.2 265.9,133.0 273.4,131.3 280.9,130.5 288.4,128.8 295.9,127.6 303.4,126.5 310.9,125.4 318.4,124.2 326.0,119.1 333.5,118.0 341.0,116.6 348.5,115.2 356.0,114.0 363.5,109.5 371.0,108.9 378.5,108.4 386.0,107.5 393.6,106.4 401.1,105.5 408.6,104.7 416.1,103.5 423.6,102.4 431.1,98.7 438.6,97.3 446.1,96.2 453.7,95.3 461.2,94.2 468.7,93.1 476.2,91.7 483.7,87.1 491.2,86.3 498.7,84.8 506.2,84.0 513.8,83.2 521.3,82.0 528.8,81.2 536.3,80.0 543.8,79.5 551.3,78.3 558.8,77.2 566.3,70.1 573.9,69.0 581.4,66.4 588.9,60.5 596.4,57.4 603.9,54.0 611.4,52.3 618.9,50.0 626.4,47.4 634.0,47.2 641.5,46.3 649.0,46.3 656.5,41.8 664.0,42.3" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linejoin="round"/>
+      <text x="48.0" y="208" class="axis-x">05-07</text><text x="123.1" y="208" class="axis-x">05-17</text><text x="198.2" y="208" class="axis-x">05-27</text><text x="273.4" y="208" class="axis-x">06-06</text><text x="348.5" y="208" class="axis-x">06-16</text><text x="423.6" y="208" class="axis-x">06-26</text><text x="498.7" y="208" class="axis-x">07-06</text><text x="573.9" y="208" class="axis-x">07-16</text><text x="649.0" y="208" class="axis-x">07-28</text>
+    </svg></div>
+   <div class="panel"><div class="card-title" style="margin-bottom:8px">週次の閲覧数</div><svg viewBox="0 0 680 220" class="chart" preserveAspectRatio="xMidYMid meet">
+      <line x1="48" y1="16.0" x2="664" y2="16.0" class="grid"/><text x="40" y="20.0" class="axis-y">25,000</text><line x1="48" y1="58.5" x2="664" y2="58.5" class="grid"/><text x="40" y="62.5" class="axis-y">18,750</text><line x1="48" y1="101.0" x2="664" y2="101.0" class="grid"/><text x="40" y="105.0" class="axis-y">12,500</text><line x1="48" y1="143.5" x2="664" y2="143.5" class="grid"/><text x="40" y="147.5" class="axis-y">6,250</text><line x1="48" y1="186.0" x2="664" y2="186.0" class="grid"/><text x="40" y="190.0" class="axis-y">0</text><rect x="61.7" y="108.1" width="41.1" height="77.9" rx="3" fill="#2563eb"/><rect x="130.1" y="48.6" width="41.1" height="137.4" rx="3" fill="#2563eb"/><rect x="198.6" y="120.9" width="41.1" height="65.1" rx="3" fill="#2563eb"/><rect x="267.0" y="98.6" width="41.1" height="87.4" rx="3" fill="#2563eb"/><rect x="335.5" y="47.7" width="41.1" height="138.3" rx="3" fill="#2563eb"/><rect x="403.9" y="145.7" width="41.1" height="40.3" rx="3" fill="#2563eb"/><rect x="472.4" y="67.8" width="41.1" height="118.2" rx="3" fill="#2563eb"/><rect x="540.8" y="70.9" width="41.1" height="115.1" rx="3" fill="#2563eb"/><rect x="609.2" y="136.1" width="41.1" height="49.9" rx="3" fill="#2563eb"/><text x="82.2" y="208" class="axis-x">06-07</text><text x="150.7" y="208" class="axis-x">06-14</text><text x="219.1" y="208" class="axis-x">06-21</text><text x="287.6" y="208" class="axis-x">06-28</text><text x="356.0" y="208" class="axis-x">07-05</text><text x="424.4" y="208" class="axis-x">07-12</text><text x="492.9" y="208" class="axis-x">07-19</text><text x="561.3" y="208" class="axis-x">07-26</text><text x="629.8" y="208" class="axis-x">08-02</text>
+    </svg></div>
+ </div>
+ <div class="panel" style="margin-top:14px"><div class="card-title" style="margin-bottom:8px">週次エンゲージメント（いいね＋返信＋リポスト＋引用）</div><svg viewBox="0 0 680 220" class="chart" preserveAspectRatio="xMidYMid meet">
+      <line x1="48" y1="16.0" x2="664" y2="16.0" class="grid"/><text x="40" y="20.0" class="axis-y">100</text><line x1="48" y1="58.5" x2="664" y2="58.5" class="grid"/><text x="40" y="62.5" class="axis-y">75</text><line x1="48" y1="101.0" x2="664" y2="101.0" class="grid"/><text x="40" y="105.0" class="axis-y">50</text><line x1="48" y1="143.5" x2="664" y2="143.5" class="grid"/><text x="40" y="147.5" class="axis-y">25</text><line x1="48" y1="186.0" x2="664" y2="186.0" class="grid"/><text x="40" y="190.0" class="axis-y">0</text><rect x="61.7" y="119.7" width="41.1" height="66.3" rx="3" fill="#db2777"/><rect x="130.1" y="99.3" width="41.1" height="86.7" rx="3" fill="#db2777"/><rect x="198.6" y="116.3" width="41.1" height="69.7" rx="3" fill="#db2777"/><rect x="267.0" y="155.4" width="41.1" height="30.6" rx="3" fill="#db2777"/><rect x="335.5" y="75.5" width="41.1" height="110.5" rx="3" fill="#db2777"/><rect x="403.9" y="169.0" width="41.1" height="17.0" rx="3" fill="#db2777"/><rect x="472.4" y="41.5" width="41.1" height="144.5" rx="3" fill="#db2777"/><rect x="540.8" y="140.1" width="41.1" height="45.9" rx="3" fill="#db2777"/><rect x="609.2" y="138.4" width="41.1" height="47.6" rx="3" fill="#db2777"/><text x="82.2" y="208" class="axis-x">06-07</text><text x="150.7" y="208" class="axis-x">06-14</text><text x="219.1" y="208" class="axis-x">06-21</text><text x="287.6" y="208" class="axis-x">06-28</text><text x="356.0" y="208" class="axis-x">07-05</text><text x="424.4" y="208" class="axis-x">07-12</text><text x="492.9" y="208" class="axis-x">07-19</text><text x="561.3" y="208" class="axis-x">07-26</text><text x="629.8" y="208" class="axis-x">08-02</text>
+    </svg></div>
+
+ <h2>この週の伸びた投稿 TOP3</h2>
+ <table>
+   <thead><tr><th class="rank">#</th><th>投稿</th><th class="num">閲覧</th><th class="num">いいね</th></tr></thead>
+   <tbody><tr>
+          <td class="rank">1</td>
+          <td class="ptext">Amazon物販で中古品を1個でも扱うなら、古物商許可がないと最大30万円の罰金対象です。せどり出身の人ほど新品だけのつもりが、いつの間にか…<div class="pmeta">2026-07-31 &nbsp;<a href="https://www.threads.com/@toshi_amazon_buppan/post/DbdldVrIA8U" target="_blank" rel="noopener">投稿を開く ↗</a></div></td>
+          <td class="num">932</td>
+          <td class="num">2</td>
+        </tr><tr>
+          <td class="rank">2</td>
+          <td class="ptext">えっと.....。Amazon物販ガチれば、パートも辞めれるし会社依存もゼロになります。私の1日のスケジュールは、朝6時にKeepaで30分…<div class="pmeta">2026-07-31 &nbsp;<a href="https://www.threads.com/@toshi_amazon_buppan/post/DbdPZDYGnRa" target="_blank" rel="noopener">投稿を開く ↗</a></div></td>
+          <td class="num">705</td>
+          <td class="num">6</td>
+        </tr><tr>
+          <td class="rank">3</td>
+          <td class="ptext">Amazon物販をやるなら、ネットで受け取った領収書を紙に印刷して保存してるだけだと、それ違反になります。2024年1月から、メールやネット…<div class="pmeta">2026-07-30 &nbsp;<a href="https://www.threads.com/@toshi_amazon_buppan/post/Dba5y35myPP" target="_blank" rel="noopener">投稿を開く ↗</a></div></td>
+          <td class="num">387</td>
+          <td class="num">0</td>
+        </tr></tbody>
+ </table>
+
+ <h2>運用メモ・所感</h2>
+ <div class="notebox">週間投稿本数の減少について：予約投稿の設定ミスにより、一部の投稿が配信されなかった日がありました。設定は修正済みで、次週以降は通常の投稿本数に戻します。</div>
+
+ <footer>生成日時: 2026-08-02 18:40 ／ Threads API 自動集計 ／ 株式会社ビルゲート</footer>
+</div></body></html>
